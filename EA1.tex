@@ -6,16 +6,117 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{array}
-\usepackagegerman \usepackagefancyheadings
+\usepackage{german, fancyheadings}
 \usepackage{eurosym}
 \pagestyle{fancy}
-\setlength{parindent}{0em}
-\newcommand{N}{mathbb{N}}
-\newcommand{M}{$times$}
+\setlength{\parindent}{0em}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\M}{$\times$}
 \newtheorem{Sa}{Satz}[subsection]
 \newtheorem{Kor}{Korollar}[subsection]
 \newtheorem{Prop}{Proposition}[subsection]
 \newtheorem{Def}{Definition}[subsection]
 \lhead{Marcel Benders - Matrikelnummer: 5431760}
 \begin{document}
+\section*{1.2}
+Den Beweis erbringen wir mithilfe von Wahrheitstafeln. \\
+
+1: 
+
+
+\begin{tabular}{|c|c|c|c||c|}
+\hline
+$A$ & $B$   & $C$   & $B \vee C$    & $A \wedge (B \vee C)$  \\
+\hline
+\hline
+0   &  0    & 0     &   0           &   0\\
+0   &  0    & 1     &   1           &   0\\
+0   &  1    & 0     &   1           &   0\\
+0   &  1    & 1     &   1           &   0\\
+1   &  0    & 0     &   0           &   0\\
+1   &  0    & 1     &   1           &   1\\
+1   &  1    & 0     &   1           &   1\\
+1   &  1    & 1     &   1           &   1\\
+\hline
+
+\end{tabular}
+
+
+
+
+\begin{tabular}{|c|c|c|c|c||c|}
+\hline
+$A$ & $B$   & $C$   & $A \wedge B$  & $A \wedge C$  & $(A \wedge B) \vee (A \wedge C)$  \\
+\hline
+\hline
+0   &  0    & 0     &   0           &   0           & 0 \\
+0   &  0    & 1     &   0           &   0           & 0 \\
+0   &  1    & 0     &   0           &   0           & 0 \\
+0   &  1    & 1     &   0           &   0           & 0 \\
+1   &  0    & 0     &   0           &   0           & 0 \\
+1   &  0    & 1     &   0           &   1           & 1 \\
+1   &  1    & 0     &   1           &   0           & 1 \\
+1   &  1    & 1     &   1           &   1           & 1 \\
+\hline
+
+\end{tabular}
+
+Die beiden hinteren Spalten sind identisch, somit sind die beiden Formeln logisch äquivalent.
+
+\newpage
+
+2:
+
+\begin{tabular}{|c|c|c|c||c|}
+\hline
+$A$ & $B$   & $C$   & $B \wedge C$    & $A \vee (B \wedge C)$  \\
+\hline
+\hline
+0   &  0    & 0     &   0           &   0\\
+0   &  0    & 1     &   0           &   0\\
+0   &  1    & 0     &   0           &   0\\
+0   &  1    & 1     &   1           &   1\\
+1   &  0    & 0     &   0           &   1\\
+1   &  0    & 1     &   0           &   1\\
+1   &  1    & 0     &   0           &   1\\
+1   &  1    & 1     &   1           &   1\\
+\hline
+
+\end{tabular}
+
+
+
+
+\begin{tabular}{|c|c|c|c|c||c|}
+\hline
+$A$ & $B$   & $C$   & $A \vee B$  & $A \vee C$  & $(A \vee B) \wedge (A \vee C)$  \\
+\hline
+\hline
+0   &  0    & 0     &   0           &   0           & 0 \\
+0   &  0    & 1     &   0           &   1           & 0 \\
+0   &  1    & 0     &   1           &   0           & 0 \\
+0   &  1    & 1     &   1           &   1           & 1 \\
+1   &  0    & 0     &   1           &   1           & 1 \\
+1   &  0    & 1     &   1           &   1           & 1 \\
+1   &  1    & 0     &   1           &   1           & 1 \\
+1   &  1    & 1     &   1           &   1           & 1 \\
+\hline
+
+\end{tabular}
+
+Auch hier vergleichen wir wieder die beiden Ergebnisspalten und können ablesen, dass die
+Formeln logisch äquivalent sind.
+
+\section*{1.3}
+--
+
+\section*{1.4}
+--
+
+\section*{1.5}
+--
+
+\section*{1.6}
+--
+
 \end{document}
